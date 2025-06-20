@@ -21,14 +21,22 @@ A modular, extensible C++ terminal-based command framework using **CRTP**, **CMa
 fivo/
 ├── CMakeLists.txt
 ├── src/
-│ ├── main.cpp
-│ ├── core/ # Command base & registry
-│ ├── utils/ # Optional helpers
-│ └── commands/
-│ ├── help/ # helpCommand.hpp
-│ ├── math/ # addCommand.hpp, subCommand.hpp, sqrtCommand.hpp
-│ ├── system/ # shellCommand.hpp
-│ └── network/ # httpCommand.hpp
+│   ├── main.cpp
+│   ├── core/            # Command base classes and CommandRegistry
+│   │   ├── commandBase.hpp
+│   │   └── commandRegistry.hpp / .cpp
+│   ├── utils/           # Optional utility headers
+│   └── commands/
+│       ├── help/        # Help command
+│       │   └── helpCommand.hpp
+│       ├── math/        # Mathematical commands
+│       │   ├── addCommand.hpp
+│       │   ├── subCommand.hpp
+│       │   └── sqrtCommand.hpp
+│       ├── system/      # System/shell commands
+│       │   └── shellCommand.hpp
+│       └── network/     # HTTP client (GET, POST, PUT, DELETE)
+│           └── httpCommand.hpp
 
 
 ---
