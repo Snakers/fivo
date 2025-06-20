@@ -14,6 +14,30 @@ A modular, extensible C++ terminal-based command framework using **CRTP**, **CMa
 - 📦 **Modern CMake** – modular, header-first structure
 - 🧪 **Header-only commands** – clean, testable, and easy to extend
 
+## 📁 Project Structure
+
+```text
+fivo/
+├── CMakeLists.txt
+├── src/
+│   ├── main.cpp
+│   ├── core/            # Command base classes and CommandRegistry
+│   │   ├── commandBase.hpp
+│   │   └── commandRegistry.hpp / .cpp
+│   ├── utils/           # Optional utility headers
+│   └── commands/
+│       ├── help/        # Help command
+│       │   └── helpCommand.hpp
+│       ├── math/        # Mathematical commands
+│       │   ├── addCommand.hpp
+│       │   ├── subCommand.hpp
+│       │   └── sqrtCommand.hpp
+│       ├── system/      # System/shell commands
+│       │   └── shellCommand.hpp
+│       └── network/     # HTTP client (GET, POST, PUT, DELETE)
+│           └── httpCommand.hpp
+'''
+
 ## 🏁 Getting Started
 
 ### 🔧 Prerequisites
@@ -58,7 +82,7 @@ Let’s say you want to create a command named echo:
 
 1. Create the header
 📄 src/commands/echo/echoCommand.hpp
-'''
+
 #pragma once
 #include "../../core/commandBase.hpp"
 #include <iostream>
@@ -74,7 +98,7 @@ public:
     static std::string command_name() { return "echo"; }
     static std::string command_help() { return "Echoes the input arguments."; }
 };
-'''
+
 
 2. Create a CMakeLists.txt in that folder
 📄 src/commands/echo/CMakeLists.txt
