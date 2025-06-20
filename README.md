@@ -16,6 +16,7 @@ A modular, extensible C++ terminal-based command framework using CRTP, CMake, an
 
 🧪 Header-only commands – Clean, testable, and easy to extend
 
+---
 ## 📁 Project Structure
 
 >fivo/
@@ -38,6 +39,7 @@ A modular, extensible C++ terminal-based command framework using CRTP, CMake, an
 │       └── network/         # HTTP client
 │           └── httpCommand.hpp
 
+---
 
 🏁 Getting Started
 🔧 Prerequisites
