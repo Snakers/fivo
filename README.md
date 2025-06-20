@@ -19,25 +19,42 @@ A modular, extensible C++ terminal-based command framework using CRTP, CMake, an
 ---
 ## 📁 Project Structure
 
->fivo/
 ├── CMakeLists.txt
-├── src/
-│   ├── main.cpp
-│   ├── core/                # Command base classes and CommandRegistry
-│   │   ├── commandBase.hpp
-│   │   └── commandRegistry.hpp / .cpp
-│   ├── utils/               # Optional utility headers
-│   └── commands/
-│       ├── help/            # Help command
-│       │   └── helpCommand.hpp
-│       ├── math/            # Mathematical commands
-│       │   ├── addCommand.hpp
-│       │   ├── subCommand.hpp
-│       │   └── sqrtCommand.hpp
-│       ├── system/          # System/shell commands
-│       │   └── shellCommand.hpp
-│       └── network/         # HTTP client
-│           └── httpCommand.hpp
+├── CMakeLists.txt.user
+├── inc
+│   └── startup.hpp
+├── README.md
+└── src
+    ├── commands
+    │   ├── CMakeLists.txt
+    │   ├── help
+    │   │   ├── CMakeLists.txt
+    │   │   └── helpCommand.hpp
+    │   ├── math
+    │   │   ├── addCommand.hpp
+    │   │   ├── CMakeLists.txt
+    │   │   ├── mulCommand.hpp
+    │   │   ├── multCommand.hpp
+    │   │   ├── sqrtCommand.hpp
+    │   │   └── subCommand.hpp
+    │   ├── network
+    │   │   ├── CMakeLists.txt
+    │   │   └── http
+    │   │       ├── CMakeLists.txt
+    │   │       └── httpCommand.hpp
+    │   └── system
+    │       ├── CMakeLists.txt
+    │       └── shellCommand.hpp
+    ├── core
+    │   ├── CMakeLists.txt
+    │   ├── commandBase.cpp
+    │   ├── commandBase.hpp
+    │   ├── commandRegistry.cpp
+    │   └── commandRegistry.hpp
+    ├── main.cpp
+    └── utils
+        ├── CMakeLists.txt
+        └── utils.hpp
 
 ---
 
