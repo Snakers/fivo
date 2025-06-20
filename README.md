@@ -17,9 +17,27 @@ A modular, extensible C++ terminal-based command framework using **CRTP**, **CMa
 ---
 
 ## 📁 Project Structure
-
-<pre lang="markdown"> ### 📁 Project Structure ``` fivo/ ├── CMakeLists.txt ├── src/ │ ├── main.cpp │ ├── core/ # Command base classes and CommandRegistry │ │ ├── commandBase.hpp │ │ └── commandRegistry.hpp / .cpp │ ├── utils/ # Optional utility headers │ └── commands/ │ ├── help/ # Help command │ │ └── helpCommand.hpp │ ├── math/ # Mathematical commands │ │ ├── addCommand.hpp │ │ ├── subCommand.hpp │ │ └── sqrtCommand.hpp │ ├── system/ # System/shell commands │ │ └── shellCommand.hpp │ └── network/ # HTTP client (GET, POST, PUT, DELETE) │ └── httpCommand.hpp ``` </pre>
-
+'''
+fivo/
+├── CMakeLists.txt
+├── src/
+│   ├── main.cpp
+│   ├── core/            # Command base classes and CommandRegistry
+│   │   ├── commandBase.hpp
+│   │   └── commandRegistry.hpp / .cpp
+│   ├── utils/           # Optional utility headers
+│   └── commands/
+│       ├── help/        # Help command
+│       │   └── helpCommand.hpp
+│       ├── math/        # Mathematical commands
+│       │   ├── addCommand.hpp
+│       │   ├── subCommand.hpp
+│       │   └── sqrtCommand.hpp
+│       ├── system/      # System/shell commands
+│       │   └── shellCommand.hpp
+│       └── network/     # HTTP client (GET, POST, PUT, DELETE)
+│           └── httpCommand.hpp
+'''
 ---
 
 ## 🏁 Getting Started
