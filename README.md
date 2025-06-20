@@ -131,26 +131,32 @@ target_include_directories(command_echo INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
 
 3. Add the Echo Command to Command List
 📄 src/commands/CMakeLists.txt
+```
 add_subdirectory(echo)
+```
 
 
-4. Link the Echo Command
+5. Link the Echo Command
 📄 src/CMakeLists.txt
 
+```
 target_link_libraries(fivo
     ...
     command_echo
 )
+```
 
 
 5. Register the Command
 📄 inc/startup.hpp
 
+```
 #include "echoCommand.hpp"
 
 void init_commands() {
     CommandRegistry::instance().register_command<Echo>();
 }
+```
 
 
 ✅ Done!
