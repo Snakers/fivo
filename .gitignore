@@ -1,0 +1,28 @@
+# C++ build files
+build/
+*.o
+*.obj
+*.exe
+*.out
+*.log
+*.a
+*.so
+*.dll
+*.dylib
+*.vcxproj*
+*.cmake
+
+# Qt Creator
+*.user
+*.pro.user
+*.autosave
+*.qmake.stash
+*.DS_Store
+*.creator.*
+
+# General
+*.swp
+*.bak
+*.tmp
+.idea/
+.vscode/
