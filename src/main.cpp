@@ -1,7 +1,3 @@
 #include "startup.hpp"
-#include <iostream>
-#include <string>
 
-
-
-int main() { run(); return 0;}
+int main() { run(); return 0; }
