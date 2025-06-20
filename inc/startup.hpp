@@ -13,11 +13,18 @@
 // Register all available commands
 void init_commands() {
     CommandRegistry::instance().register_command<Help>();
-    CommandRegistry::instance().register_command<Add>();
+
+    CommandRegistry::instance().register_command<Add<int>>();
+    CommandRegistry::instance().register_command<Add<double>>();
+
     CommandRegistry::instance().register_command<Sub<int>>();
     CommandRegistry::instance().register_command<Sub<double>>();
+
+    CommandRegistry::instance().register_command<Mul<int>>();
+    CommandRegistry::instance().register_command<Mul<double>>();
+
     CommandRegistry::instance().register_command<Sqrt>();
-    CommandRegistry::instance().register_command<Mul>();
+
     CommandRegistry::instance().register_command<Shell>();
     CommandRegistry::instance().register_command<Http>();
 }
