@@ -58,6 +58,7 @@ Let’s say you want to create a command named echo:
 
 1. Create the header
 📄 src/commands/echo/echoCommand.hpp
+'''
 #pragma once
 #include "../../core/commandBase.hpp"
 #include <iostream>
@@ -73,7 +74,7 @@ public:
     static std::string command_name() { return "echo"; }
     static std::string command_help() { return "Echoes the input arguments."; }
 };
-
+'''
 
 2. Create a CMakeLists.txt in that folder
 📄 src/commands/echo/CMakeLists.txt
