@@ -18,7 +18,7 @@ A modular, extensible C++ terminal-based command framework using CRTP, CMake, an
 
 ---
 ## 📁 Project Structure
-
+```
 ├── CMakeLists.txt
 ├── CMakeLists.txt.user
 ├── inc
@@ -55,26 +55,27 @@ A modular, extensible C++ terminal-based command framework using CRTP, CMake, an
     └── utils
         ├── CMakeLists.txt
         └── utils.hpp
-
+```
 ---
 
 🏁 Getting Started
 🔧 Prerequisites
 
 Install dependencies (for Ubuntu/Debian):
-
+```
 sudo apt update
 sudo apt install build-essential cmake libcurl4-openssl-dev
-
+```
 
 ⚙️ Build
+```
 git clone https://github.com/yourname/fivo.git
 cd fivo
 mkdir build && cd build
 cmake ..
 make
 ./fivo
-
+```
 
 🧪 Usage Examples
 > help
@@ -103,6 +104,7 @@ Let’s say you want to create a command named echo:
 
 1. Create the Header
 📄 src/commands/echo/echoCommand.hpp
+```
 #pragma once
 #include "commandBase.hpp"
 #include <iostream>
@@ -118,7 +120,7 @@ public:
     static std::string command_name() { return "echo"; }
     static std::string command_help() { return "Echoes the input arguments."; }
 };
-
+```
 
 2. Create a CMake File for the Command
 📄 src/commands/echo/CMakeLists.txt
